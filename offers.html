@@ -10,14 +10,20 @@
             padding: 0;
             font-family: 'Cairo', sans-serif;
             background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .header {
             background-color: #000;
             color: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .content {
@@ -60,59 +66,88 @@
             background-color: #222;
             color: white;
             text-align: center;
-            padding: 20px 10px;
-            margin-top: 40px;
-            font-size: 0.95rem;
+            padding: 15px 10px;
+            margin-top: auto;
+            font-size: 0.85rem;
         }
 
         .footer .social-links {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .footer .social-links a {
             color: #ddd;
             text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background-color: rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
         }
 
         .footer .social-links a:hover {
             color: #ffcc00;
+            background-color: rgba(255,204,0,0.1);
         }
 
+        /* وسائط استجابة للهواتف */
+        @media (max-width: 768px) {
+            .header {
+                font-size: 1.3rem;
+                padding: 12px;
+            }
 
-    </style>
-</head>
-<body>
-<div class="header">
-    عروض مطعم مجاهد
-</div>
+            .content {
+                grid-template-columns: 1fr;
+                padding: 15px;
+                gap: 12px;
+            }
 
-<div class="content">
-    <div class="item-box">
-        <img src="01-11-2022_1129pm5c264c181626e4cfd5be.jpg" alt=" شاورما">
-        اشتري وجبة شاورما <strong>والثانية مجانا!</strong>
-    </div>
-    <div class="item-box">
-        <img src="08-28-2022_1242pm71928ffe666f8f27ac43.jpg" alt="عرض">
-        خصم <strong>20%</strong> على جميع المقبلات من 5 إلى 7 مساءً.
-    </div>
-    <div class="item-box">
-        <img src="11-07-2023_0153pm04623a2f4957ceb9bff7.jpg" alt="عرض">
-        مشروب مجاني مع كل طلب عائلي!
-    </div>
-</div>
-<footer class="footer">
-    <div class="social-links">
-        <a href="https://www.facebook.com/yourpage" target="_blank">فيسبوك</a>
-        <a href="tel:+962790000000">اتصل بنا</a>
-        <a href="https://www.instagram.com/yourpage" target="_blank">إنستغرام</a>
-    </div>
-    <div class="copyright">
-        © 2025 مطعم مجاهد. جميع الحقوق محفوظة.
-    </div>
-</footer>
+            .item-box {
+                max-width: 300px;
+                padding: 12px;
+            }
 
-</body>
-</html>
+            .item-box img {
+                height: 140px;
+            }
+
+            .item-title {
+                font-size: 1rem;
+            }
+
+            .price {
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                padding: 12px 8px;
+            }
+
+            .footer .social-links a {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                font-size: 1.2rem;
+            }
+
+            .item-box img {
+                height: 120px;
+            }
+
+            .item-title {
+                font-size: 0.95rem;
+            }
+
+            .price {
+                font-size: 0.85rem;
+            }
+        }
+
