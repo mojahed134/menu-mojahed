@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>ماكولات مطعم مجاهد</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      background-color: #000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .content {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .item-box {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      max-width: 270px;
+      transition: transform 0.3s ease;
+    }
+
+    .item-box:hover {
+      transform: scale(1.05);
+    }
+
+    .item-box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .item-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+<div class="header">ماكولات مطعم مجاهد</div>
+<div class="content">
+  <div class="item-box">
+    <img src="download (4).jpg" alt="منسف">
+    <div class="item-title"> سدر منسف 2كيلو لحم</div>
+    <div class="price">30 دينار</div>
+  </div>
+  <div class="item-box">
+    <img src="01-11-2022_1129pm5c264c181626e4cfd5be.jpg" alt=" شاورما">
+    <div class="item-title"> وجبة شاورما</div>
+    <div class="price">2 دينار</div>
+  </div>
+  <div class="item-box">
+    <img src="01-20-2022_0506pm4e5a5721bab66d52d702.jpg" alt="وجبة حلبي">
+    <div class="item-title">وجبة حلبي</div>
+    <div class="price">3 دينار</div>
+  </div>
+  <div class="item-box">
+    <a href="broasted.html" style="text-decoration: none; color: inherit;">
+      <img src="01-20-2022_0524pme0f83b0954f49d58c3ba.jpg" alt="البروستد">
+      <div class="item-title">البرستد</div>
+    </a>
+  </div>
+</div>
+</body>
+</html>
